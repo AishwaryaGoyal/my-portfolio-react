@@ -6,17 +6,18 @@ import Carousel from "./components/Carousel";
 import Footer from "./components/common/Footer";
 import HeaderHandheld from "./components/common/HeaderHandheld";
 
-function App() {
-  return (
-    <div className="container">
-      <HeaderHandheld />
-      <Header />
-      <Content />
-      <Work />
-      <Carousel />
-      <Footer />
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className="container">
+        <HeaderHandheld />
+        <Header />
+        <Content />
+        <Work />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;

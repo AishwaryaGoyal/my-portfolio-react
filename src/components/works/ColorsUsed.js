@@ -1,18 +1,18 @@
 import React from "react";
 
-function ColorsUsed(props) {
-  const colorDivs = props.colorsUsed.map((color) => (
-    <div className={color.className}>
-      <a>{color.name}</a>
-    </div>
-  ));
-
-  return (
-    <>
-      <p>Colors mostly used:</p>
-      {colorDivs}
-    </>
-  );
+class ColorsUsed extends React.Component {
+  render() {
+    return (
+      <>
+        <p>Colors mostly used:</p>
+        {this.props.colorsUsed.map((color) => (
+          <div className={color.className}>
+            <button type="button">{color.name}</button>
+          </div>
+        ))}
+      </>
+    );
+  }
 }
 
 export default ColorsUsed;

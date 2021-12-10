@@ -1,40 +1,48 @@
 import React from "react";
-import Explanation1 from "./ExplanationWork1";
-import Explanation2 from "./ExplanationWork2";
-import Explanation3 from "./ExplanationWork3";
-import childVideo from "../../videos/child.mp4";
-import moonVideo from "../../videos/moon.mp4";
-import flowersVideo from "../../videos/flowers.mp4";
+import ExplanationWork1 from "./ExplanationWork1";
+import ExplanationWork2 from "./ExplanationWork2";
+import ExplanationWork3 from "./ExplanationWork3";
 
-function Work() {
-  return (
-    <>
-      <div className="work">
-        <div className="video-container">
-          <video controls loop preload="auto" height="450px">
-            <source src={childVideo} type="video/mp4" />
-          </video>
+class Work extends React.Component {
+  render() {
+    return (
+      <>
+        <div className="work">
+          <div className="video-container">
+            <iframe
+              title="Child by the river"
+              src="https://drive.google.com/file/d/158hm-4jYZqmdZghM3o5IucFYaoPe3g4T/preview"
+              height="450"
+              allow="autoplay"
+            ></iframe>
+          </div>
+          <ExplanationWork1 />
         </div>
-        <Explanation1 />
-      </div>
-      <div className="work">
-        <div className="video-container">
-          <video controls loop preload="auto" height="450px">
-            <source src={moonVideo} type="video/mp4" />
-          </video>
+        <div className="work">
+          <div className="video-container">
+            <iframe
+              title="Moon and water girl"
+              src="https://drive.google.com/file/d/1nUGlKyuTlh0wthWycPteTOx9MekGJWjn/preview"
+              height="450"
+              allow="autoplay"
+            ></iframe>
+          </div>
+          <ExplanationWork2 />
         </div>
-        <Explanation2 />
-      </div>
-      <div className="work">
-        <div className="video-container">
-          <video controls loop preload="auto" height="450px">
-            <source src={flowersVideo} type="video/mp4" />
-          </video>
+        <div className="work">
+          <div className="video-container">
+            <iframe
+              title="Flowers on a bicycle"
+              src="https://drive.google.com/file/d/1rhItnBvUivaAx8DPqPTjetR4QoXgMWW9/preview"
+              height="450"
+              allow="autoplay"
+            ></iframe>
+          </div>
+          <ExplanationWork3 />
         </div>
-        <Explanation3 />
-      </div>
-    </>
-  );
+      </>
+    );
+  }
 }
 
 export default Work;

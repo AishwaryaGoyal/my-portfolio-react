@@ -12,29 +12,10 @@
   }
 }
 
-@font-face {
-  font-family: Zen;
-  src: url(fonts/ZenAntiqueSoft-Regular.ttf);
-}
-
-@font-face {
-  font-family: Roboto-Medium;
-  src: url(fonts/Roboto-Medium.ttf);
-}
-
-@font-face {
-  font-family: Roboto-Regular;
-  src: url(fonts/Roboto-Regular.ttf);
-}
-
-@font-face {
-  font-family: Fruktur-Regular;
-  src: url(fonts/Fruktur-Regular.ttf);
-}
-
-@font-face {
-  font-family: BirthstoneBounce-Regular;
-  src: url(fonts/BirthstoneBounce-Regular.ttf);
+img,
+video,
+iframe {
+  display: block;
 }
 
 button {
@@ -169,7 +150,7 @@ body {
   background-color: #fdde8a;
   font: 0.9rem "Fira Sans", sans-serif;
   transition: background-color 1s;
-  font-family: Roboto-Medium;
+  font-family: "Roboto Mono";
 }
 
 .btn-home:focus,
@@ -222,20 +203,6 @@ body {
   transform: scale(2);
 }
 
-.header a,
-.header-handheld a,
-.content a,
-.footer a {
-  text-decoration: none;
-}
-
-.header > a:visited,
-.header-handheld > a:visited,
-.content > a:visited,
-.footer > a:visited {
-  color: black;
-}
-
 .content {
   grid-column: 1/ -1;
   display: flex;
@@ -255,16 +222,16 @@ body {
 
 .vlarge-text {
   font-size: 4rem;
-  font-family: Zen;
+  font-family: "Zen Antique Soft";
 }
 
 .large-text {
   font-size: 1.5rem;
-  font-family: Roboto-Regular;
+  font-family: "Roboto Mono";
 }
 
 .small-text {
-  font-family: Roboto-Regular;
+  font-family: "Roboto Mono";
   color: white;
   font-size: 1.03rem;
 }
@@ -336,12 +303,12 @@ body {
   background-color: #0047ab;
 }
 
-.burntumber a,
-.crimsonred a,
-.burntsienna a,
-.yellowochre a,
-.prussianblue a,
-.cobaltblue a {
+.burntumber button,
+.crimsonred button,
+.burntsienna button,
+.yellowochre button,
+.prussianblue button,
+.cobaltblue button {
   display: none;
   position: absolute;
   left: 10%;
@@ -364,12 +331,12 @@ body {
   background-color: white;
 }
 
-.burntumber:hover a,
-.crimsonred:hover a,
-.burntsienna:hover a,
-.yellowochre:hover a,
-.prussianblue:hover a,
-.cobaltblue:hover a {
+.burntumber:hover button,
+.crimsonred:hover button,
+.burntsienna:hover button,
+.yellowochre:hover button,
+.prussianblue:hover button,
+.cobaltblue:hover button {
   display: block;
   opacity: 1;
 }
@@ -399,18 +366,20 @@ body {
   background-color: black;
 }
 
-.video-container:hover video {
+.video-container:hover video,
+.video-container:hover iframe {
   opacity: 0.6;
 }
 
-video {
+video,
+iframe {
   border-radius: 2rem;
   box-shadow: 0.5rem 0.5rem 1rem 1rem black;
   transition: opacity 1s;
 }
 
 .explanation-work {
-  font-family: Roboto-Medium;
+  font-family: "Roboto Mono";
   margin: 1rem;
 }
 
@@ -438,10 +407,6 @@ video {
   height: 30rem;
   position: relative;
   box-shadow: 10px -10px 5px black;
-}
-
-.carousel > a:visited {
-  color: white;
 }
 
 #carouselImage1,
