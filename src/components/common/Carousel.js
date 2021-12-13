@@ -1,9 +1,4 @@
 import React from "react";
-import swans from "../img/swans-landscape.jpg";
-import child from "../img/child-landscape.jpg";
-import seascape from "../img/seascape-landscape.jpg";
-import snowscape from "../img/snow-landscape.jpg";
-import abstractGirl from "../img/abstract-girl-landscape.jpg";
 
 function Carousel() {
   var currentRadioID = "radio1",
@@ -84,19 +79,19 @@ function Carousel() {
   return (
     <div className="carousel" id="carousel">
       <div id="carouselImage1">
-        <img src={swans} alt="Swans in landscape mode" height="100%" />
+        <img alt="Swans in landscape mode" height="100%" />
       </div>
       <div id="carouselImage2">
-        <img src={child} alt="Child sitting by a river" height="100%" />
+        <img alt="Child sitting by a river" height="100%" />
       </div>
       <div id="carouselImage3">
-        <img src={seascape} alt="Seascape" height="100%" />
+        <img alt="Seascape" height="100%" />
       </div>
       <div id="carouselImage4">
-        <img src={snowscape} alt="Snowscape" height="100%" />
+        <img alt="Snowscape" height="100%" />
       </div>
       <div id="carouselImage5">
-        <img src={abstractGirl} alt="Abstract girl" height="100%" />
+        <img alt="Abstract girl" height="100%" />
       </div>
 
       <button id="leftArrow" onClick={leftarrowClicked}>

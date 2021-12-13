@@ -1,23 +1,23 @@
 import React from "react";
-import Header from "./components/common/Header";
-import Content from "./components/Content";
-import Work from "./components/works/Work";
-import Carousel from "./components/Carousel";
-import Footer from "./components/common/Footer";
-import HeaderHandheld from "./components/common/HeaderHandheld";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Work from "./pages/Work";
+import Home from "./pages/Home";
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="container">
-        <HeaderHandheld />
-        <Header />
-        <Content />
-        <Work />
-        <Footer />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/work">
+          <Work />
+        </Route>
+
+        <Route path="/about">About</Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
+  );
 }
 
 export default App;
