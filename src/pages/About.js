@@ -7,11 +7,11 @@ import Footer from "../components/common/Footer";
 
 function About() {
   return (
-    <div class="container">
+    <div className="container">
       <HeaderHandheld />
       <Header />
 
-      <div class="about">
+      <div className="about">
         <AboutLeft />
         <AboutRight />
       </div>

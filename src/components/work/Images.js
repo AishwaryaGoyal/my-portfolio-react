@@ -191,165 +191,82 @@ const images = [
     src: "https://drive.google.com/uc?export=view&id=1DVDMQN8wrJV5lT9N1C6tWqZqeZJyAema",
     alt: "Elsa sleeping",
   },
+  {
+    src: "https://drive.google.com/uc?export=view&id=1-P8CqG_0bQUcaVUjL_TpGDQ7sybS8Sx7",
+    alt: "Girl with short dress",
+  },
+  {
+    src: "https://drive.google.com/uc?export=view&id=1UXy9PzCkdAumme7voVeEn_b1NCPHgo0r",
+    alt: "Avatar style girl",
+  },
+  {
+    src: "https://drive.google.com/uc?export=view&id=1Pg-d04hoVQX7-Pd78LA7L0raC79OWb5v",
+    alt: "Portrait girl",
+  },
+  {
+    src: "https://drive.google.com/uc?export=view&id=1TMYqxl_DqEP_KbOdguVgLja7A4bO0uYf",
+    alt: "Abstract females",
+  },
+  {
+    src: "https://drive.google.com/uc?export=view&id=1MfLecPkiAND3dAXvG3KPGG88bJ4039uc",
+    alt: "Abstract girl",
+  },
+  {
+    src: "https://drive.google.com/uc?export=view&id=1ksWLPW_tKzTyFLbvr9klnDUI3wJFXDg0",
+    alt: "Village",
+  },
+  {
+    src: "https://drive.google.com/uc?export=view&id=1Oo9t3jH14xlf69gXPOEmekGU5n6Hwac8",
+    alt: "Autumn",
+  },
+  {
+    src: "https://drive.google.com/uc?export=view&id=1ij6m820YKp2WLly8qHFoPWOLaeMG-54g",
+    alt: "Girl lying down",
+  },
+  {
+    src: "https://drive.google.com/uc?export=view&id=1dIAy4qPEF2FpZFM98_2e2CH3OczU1zMm",
+    alt: "Landscape penwork",
+  },
+  {
+    src: "https://drive.google.com/uc?export=view&id=1dnbYDYXlv7xMC846kznqmU9CIAP7NG3F",
+    alt: "Penwork lying girl back",
+  },
+  {
+    src: "https://drive.google.com/uc?export=view&id=1y1O3yafzQrDpCMbcI2HYB2yd9jKcGJmQ",
+    alt: "Swans",
+  },
+  {
+    src: "https://drive.google.com/uc?export=view&id=1SmyOHlMXbkIqWuksj7fRexrWgmUrUjx9",
+    alt: "Snow",
+  },
+  {
+    src: "https://drive.google.com/uc?export=view&id=1ejFLQDwUTVVNkoG-ekuvdCNhGyFOiQfz",
+    alt: "Landscape in oil colors",
+  },
+  {
+    src: "https://drive.google.com/uc?export=view&id=1CKYs0c5hVDl0AAKq-40z0WIJ3Sl2BLOp",
+    alt: "Abstract tress",
+  },
+  {
+    src: "https://drive.google.com/uc?export=view&id=1gZ4xk_1KqQCu8i-pjBG3jg6TsK1-hmBY",
+    alt: "Abstract geometric",
+  },
+  {
+    src: "https://drive.google.com/uc?export=view&id=16kSq8vSwjL1QGPQYpXOIIQsEsxS_wH6U",
+    alt: "Abstract pots",
+  },
+  {
+    src: "https://drive.google.com/uc?export=view&id=1S_geVgGkNP7CLtJFkSX1XfgVbmJRWKic",
+    alt: "Abstract instruments",
+  },
+  {
+    src: "https://drive.google.com/uc?export=view&id=1Uf3S4L2uRKWDR-q1HogDPl9MBCw-twdi",
+    alt: "Seascape",
+  },
+  {
+    src: "https://drive.google.com/uc?export=view&id=16i3xdHFBH14ulpjVmPMumJTTqTEGhcgH",
+    alt: "Sylvester",
+  },
 ];
-
-/*
-
-<div class="img-video-container">
-<img
-  src="images/elsa-sleeping.jpg"
-  alt="Elsa sleeping"
-  onclick="clickImage(src)"
-/>
-</div>
-
-<div class="img-video-container">
-<img
-  src="images/girl-shortdress.jpg"
-  alt="Girl with short dress"
-  onclick="clickImage(src)"
-/>
-</div>
-
-<div class="img-video-container">
-<img
-  src="images/avatar-style-girl.jpg"
-  alt="Avatar style girl"
-  onclick="clickImage(src)"
-/>
-</div>
-
-<div class="img-video-container">
-<img
-  src="images/portrait-girlface.jpg"
-  alt="Portrait girl"
-  onclick="clickImage(src)"
-/>
-</div>
-
-<div class="img-video-container">
-<img
-  src="images/abstract-females.jpg"
-  alt="Abstract females"
-  onclick="clickImage(src)"
-/>
-</div>
-
-<div class="img-video-container">
-<img
-  src="images/abstract-girl.jpg"
-  alt="Abstract girl"
-  onclick="clickImage(src)"
-/>
-</div>
-
-<div class="img-video-container">
-<img
-  src="images/village-framed.jpg"
-  alt="Village"
-  onclick="clickImage(src)"
-/>
-</div>
-
-<div class="img-video-container">
-<img src="images/autumn.jpg" alt="Autumn" onclick="clickImage(src)" />
-</div>
-
-<div class="img-video-container">
-<img
-  src="images/girl-figure-laying.jpg"
-  alt="Girl lying down"
-  onclick="clickImage(src)"
-/>
-</div>
-
-<div class="img-video-container">
-<img
-  src="images/landscape-pen.jpg"
-  alt="Landscape penwork"
-  onclick="clickImage(src)"
-/>
-</div>
-
-<div class="img-video-container">
-<img
-  src="images/penwork-lying-back.jpg"
-  alt="Penwork lying girl back"
-  onclick="clickImage(src)"
-/>
-</div>
-
-<div class="img-video-container">
-<img src="images/swans.jpg" alt="Swans" onclick="clickImage(src)" />
-</div>
-
-<div class="img-video-container">
-<img
-  src="images/snow-framed.jpg"
-  alt="Snow"
-  onclick="clickImage(src)"
-/>
-</div>
-
-<div class="img-video-container">
-<img
-  src="images/landscape-oil.jpg"
-  alt="Landscape"
-  onclick="clickImage(src)"
-/>
-</div>
-
-<div class="img-video-container">
-<img src="images/snow.jpg" alt="Snow" onclick="clickImage(src)" />
-</div>
-
-<div class="img-video-container">
-<img
-  src="images/abstract-trees.jpg"
-  alt="Abstract tress"
-  onclick="clickImage(src)"
-/>
-</div>
-
-<div class="img-video-container">
-<img
-  src="images/abstract-geometric.jpg"
-  alt="Abstract geometric"
-  onclick="clickImage(src)"
-/>
-</div>
-
-<div class="img-video-container">
-<img
-  src="images/abstract-pots.jpg"
-  alt="Abstract pots"
-  onclick="clickImage(src)"
-/>
-</div>
-
-<div class="img-video-container">
-<img
-  src="images/abstract-instruments.jpg"
-  alt="Abstract instruments"
-  onclick="clickImage(src)"
-/>
-</div>
-
-<div class="img-video-container">
-<img
-  src="images/seascape.jpg"
-  alt="Seascape"
-  onclick="clickImage(src)"
-/>
-</div>
-
-<div class="img-video-container">
-<img
-  src="images/sylvester.jpg"
-  alt="Sylvester"
-  onclick="clickImage(src)"
-/>
-</div>
-*/
 
 export default images;

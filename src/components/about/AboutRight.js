@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function AboutRight() {
   return (
-    <div class="about-right">
+    <div className="about-right">
       <span>
-        <i class="fas fa-quote-left fa-3x"></i>
+        <i className="fas fa-quote-left fa-3x"></i>
       </span>
-      <p class="about-para1">
+      <p className="about-para1">
         Hi! My name is Aishwarya Goyal and this is my artist website. I am from
         Panchkula, India. I am 29 years old. My study background is in Computer
         Science Engineering. I have done M.Tech in the same. And then I landed
@@ -22,7 +23,7 @@ function AboutRight() {
         and leave a message or so below.
       </p>
 
-      <p class="about-para2">
+      <p className="about-para2">
         The painting that you see here is a commissioned work for someone. I
         made this butterfly in acrylic paints. Acrylic colors are very good for
         making speedy art or art that involves bold strokes or patches. They are
@@ -31,7 +32,14 @@ function AboutRight() {
         experiences with colors if you had got a chance to use them. Feel free
         to message me below.
       </p>
+
       <h1>Aishwarya Goyal</h1>
+      <Link to="/contact">
+        {" "}
+        <button type="button" className="btn-contactus">
+          Contact Me
+        </button>
+      </Link>
     </div>
   );
 }

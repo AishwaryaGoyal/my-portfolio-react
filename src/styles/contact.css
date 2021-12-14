@@ -1,0 +1,104 @@
+/*Contact Page*/
+.fa-heart {
+  color: #dd5350;
+}
+
+.heart1 {
+  left: 10%;
+  position: absolute;
+  animation: heart-animation 10s steps(5, jump-start) 1s infinite;
+}
+
+.heart2 {
+  left: 20%;
+  position: absolute;
+  animation: heart-animation 25s steps(5, jump-start) 5s infinite;
+}
+
+.heart3 {
+  left: 30%;
+  position: absolute;
+  animation: heart-animation 5s steps(5, jump-start) 0s infinite;
+}
+
+.heart4 {
+  left: 75%;
+  position: absolute;
+  animation: heart-animation 20s steps(5, jump-start) 3s infinite;
+}
+
+.heart5 {
+  left: 90%;
+  position: absolute;
+  animation: heart-animation 15s steps(5, jump-start) 2s infinite;
+}
+
+@keyframes heart-animation {
+  0% {
+    top: -10%;
+  }
+  25% {
+    top: 25%;
+    transform: rotateY(180deg);
+  }
+  50% {
+    top: 50%;
+    transform: rotateY(45deg);
+  }
+  75% {
+    top: 75%;
+    transform: rotateZ(-30deg);
+  }
+  100% {
+    top: 90%;
+    transform: rotateY(180deg);
+  }
+}
+
+.contact {
+  grid-column: 1/ -1;
+  margin: 2rem;
+  justify-self: center;
+  display: flex;
+}
+
+form {
+  grid-column: 1/ -1;
+  margin-left: 1%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-right: auto;
+  font: 1rem Roboto-Regular;
+  margin-bottom: 0.5rem;
+}
+
+#name,
+#mail,
+#msg {
+  border: none;
+  margin-bottom: 1.5rem;
+  font: 1rem Roboto-Regular;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  width: 22rem;
+}
+
+#msg {
+  height: 13rem;
+}
+
+#btnSubmit {
+  padding: 0.8rem 1rem;
+  background-color: #dd5350;
+  color: white;
+  border-style: none;
+  border-radius: 0.2rem;
+  width: 22rem;
+}
+
+#btnSubmit:hover {
+  background-color: #7c8453;
+}

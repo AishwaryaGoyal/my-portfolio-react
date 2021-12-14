@@ -30,6 +30,7 @@
 .about-right h1 {
   font-family: "Birthstone Bounce";
   align-self: "flex-end";
+  margin-right: 3rem;
 }
 
 .img-butterfly {

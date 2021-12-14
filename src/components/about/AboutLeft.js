@@ -2,9 +2,9 @@ import React from "react";
 
 function AboutLeft() {
   return (
-    <div class="about-left">
+    <div className="about-left">
       <img
-        class="img-butterfly"
+        className="img-butterfly"
         alt="Butterfly painting"
         src="https://drive.google.com/uc?export=view&id=1C3DSNXYFfzKw3ReKQ2Gx5fbBU8l4G7Uo"
       />
@@ -14,7 +14,7 @@ function AboutLeft() {
         Right now..
       </h1>
       <img
-        class="img-mypic"
+        className="img-mypic"
         alt="Artist herself"
         src="https://drive.google.com/uc?export=view&id=122GvSKiXiPb_znfPxIdCjFgP6WggI4g_"
       />

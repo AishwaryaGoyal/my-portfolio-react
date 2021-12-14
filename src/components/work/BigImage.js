@@ -1,7 +1,7 @@
 import React from "react";
 
 function BigImage(props) {
-  console.log("It works");
+  console.log("Inside Big image", props.src);
   return (
     <div id="transparentDiv">
       <div id="bigImage">

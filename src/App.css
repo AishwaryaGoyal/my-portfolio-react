@@ -138,7 +138,9 @@ body {
   font-size: large;
 }
 
-Link {
+.btn-home,
+.btn-work,
+.btn-about {
   color: black;
   margin-right: 0.5rem;
   padding: 1rem 3.5rem;
@@ -319,12 +321,11 @@ Link {
 .btn-about-drop {
   display: none;
   margin-bottom: 0.8rem;
-  color: white !important;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
+  color: black;
+  padding: 1rem;
+  width: 100%;
   border-radius: 0.2rem;
-  font: 1rem "Fira Sans", sans-serif;
+  font: 1rem sans-serif;
   transition: background-color 1s;
 }
 
@@ -338,6 +339,7 @@ Link {
 .btn-about-drop:hover {
   border-left: 1rem solid #dd5350;
   background-color: #dd5350;
+  color: white;
 }
 
 @media (max-width: 390px) {
@@ -373,6 +375,7 @@ Link {
   .header-handheld {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
   }
 
   .btn-menu {

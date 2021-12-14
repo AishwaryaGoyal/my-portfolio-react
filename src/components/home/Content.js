@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Content() {
   return (
@@ -18,9 +19,13 @@ function Content() {
           of cartoons, kawaii and chibi. Take some time and explore my site to
           know more about me and my works.
         </p>
-        <button type="button" className="btn-contactus">
-          Contact Us
-        </button>
+
+        <Link to="/contact">
+          {" "}
+          <button type="button" className="btn-contactus">
+            Contact Us
+          </button>
+        </Link>
       </div>
 
       <div className="div-image-avatar">

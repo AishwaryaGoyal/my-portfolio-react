@@ -27,8 +27,9 @@ function Work() {
         <Image images={images} onClick={clickImage} />
       </div>
       <Footer />
-      {showBigImage} ?
-      <BigImage src={srcBigImage} btnCloseClicked={btnCloseClicked} />: null
+      {showBigImage ? (
+        <BigImage src={srcBigImage} btnCloseClicked={btnCloseClicked} />
+      ) : null}
     </div>
   );
 }
