@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Carousel() {
-  const refCarousel = React.createRef();
+  //const refCarousel = React.createRef();
   //console.log("Observer", refCarousel);
 
   //const observer = new IntersectionObserver(animateCarousel, {threshold: 0.5,});
@@ -13,16 +13,22 @@ function Carousel() {
   const [image3, setImage3] = useState(false);
   const [image4, setImage4] = useState(false);
   const [image5, setImage5] = useState(false);
-  const refimage1 = React.createRef();
-  const refimage2 = React.createRef();
-  const refimage3 = React.createRef();
-  const refimage4 = React.createRef();
-  const refimage5 = React.createRef();
-  let currentImage = refimage1.current;
+
+  const refImage1 = React.createRef();
+
+  let currentImage = refImage1;
+  console.log("Current image is ", currentImage);
+
+  let currentRadioId;
 
   function radioClicked(e) {
-    let currentRadioId = e.currentTarget.id;
-    console.log("Inside radio clicked. You clicked ", e.currentTarget.id);
+    currentRadioId = e.currentTarget.id;
+
+    document
+      .querySelectorAll(".fa-square")
+      .forEach((el) => el.classList.remove("clicked"));
+
+    e.target.classList.add("clicked");
 
     setImage1(false);
     setImage2(false);
@@ -32,38 +38,97 @@ function Carousel() {
 
     if (currentRadioId === "radio1") {
       setImage1(true);
-      currentImage = refimage1.current;
     } else if (currentRadioId === "radio2") {
       setImage2(true);
-      currentImage = refimage2.current;
     } else if (currentRadioId === "radio3") {
       setImage3(true);
-      currentImage = refimage3.current;
     } else if (currentRadioId === "radio4") {
       setImage4(true);
-      currentImage = refimage4.current;
     } else {
       setImage5(true);
-      currentImage = refimage5.current;
     }
   }
 
   function leftarrowClicked() {
-    currentImage = currentImage.previousElementSibling() || refimage5.current;
+    document
+      .querySelectorAll(".fa-square")
+      .forEach((el) => el.classList.remove("clicked"));
 
-    if (currentImage === refimage1) setImage1(true);
-    else if (currentImage === refimage2) setImage2(true);
-    else if (currentImage === refimage3) setImage3(true);
-    else if (currentImage === refimage4) setImage4(true);
-    else if (currentImage === refimage5) setImage5(true);
+    if (image1) {
+      document
+        .getElementById("radio5")
+        .firstElementChild.classList.add("clicked");
+      setImage5(true);
+      setImage1(false);
+    } else if (image2) {
+      document
+        .getElementById("radio1")
+        .firstElementChild.classList.add("clicked");
+      setImage1(true);
+      setImage2(false);
+    } else if (image3) {
+      document
+        .getElementById("radio2")
+        .firstElementChild.classList.add("clicked");
+      setImage2(true);
+      setImage3(false);
+    } else if (image4) {
+      document
+        .getElementById("radio3")
+        .firstElementChild.classList.add("clicked");
+      setImage3(true);
+      setImage4(false);
+    } else {
+      document
+        .getElementById("radio4")
+        .firstElementChild.classList.add("clicked");
+      setImage4(true);
+      setImage5(false);
+    }
   }
 
-  function rightarrowClicked() {}
+  function rightarrowClicked() {
+    document
+      .querySelectorAll(".fa-square")
+      .forEach((el) => el.classList.remove("clicked"));
+
+    if (image1) {
+      document
+        .getElementById("radio2")
+        .firstElementChild.classList.add("clicked");
+      setImage2(true);
+      setImage1(false);
+    } else if (image2) {
+      document
+        .getElementById("radio3")
+        .firstElementChild.classList.add("clicked");
+      setImage3(true);
+      setImage2(false);
+    } else if (image3) {
+      document
+        .getElementById("radio4")
+        .firstElementChild.classList.add("clicked");
+      setImage4(true);
+      setImage3(false);
+    } else if (image4) {
+      document
+        .getElementById("radio5")
+        .firstElementChild.classList.add("clicked");
+      setImage5(true);
+      setImage4(false);
+    } else {
+      document
+        .getElementById("radio1")
+        .firstElementChild.classList.add("clicked");
+      setImage1(true);
+      setImage5(false);
+    }
+  }
 
   return (
-    <div className="carousel" id="carousel" ref={refCarousel}>
+    <div className="carousel" id="carousel">
       {image1 ? (
-        <div id="carouselImage1" className="carouselImages" ref={refimage1}>
+        <div id="carouselImage1" className="carouselImages" ref={refImage1}>
           <img
             src="https://drive.google.com/uc?export=view&id=1pcwAFoDKoq-nQ6GjBs8iMplqKpnj6mFk"
             alt="Swans in landscape mode"
@@ -73,7 +138,7 @@ function Carousel() {
       ) : null}
 
       {image2 ? (
-        <div id="carouselImage2" className="carouselImages" ref={refimage2}>
+        <div id="carouselImage2" className="carouselImages">
           <img
             src="https://drive.google.com/uc?export=view&id=1WY1lyw1q6KZyrqus2t8nAmfI_qQLe3Ai"
             alt="Child sitting by a river"
@@ -83,7 +148,7 @@ function Carousel() {
       ) : null}
 
       {image3 ? (
-        <div id="carouselImage3" className="carouselImages" ref={refimage3}>
+        <div id="carouselImage3" className="carouselImages">
           <img
             src="https://drive.google.com/uc?export=view&id=12I6FjVcRu9O9j4FegrurkfKMtydWr9Pg"
             alt="Seascape"
@@ -93,7 +158,7 @@ function Carousel() {
       ) : null}
 
       {image4 ? (
-        <div id="carouselImage4" className="carouselImages" ref={refimage4}>
+        <div id="carouselImage4" className="carouselImages">
           <img
             src="https://drive.google.com/uc?export=view&id=18F5WkW1AtmjnWRkHsc-8Jp0n1iJoIi6s"
             alt="Snowscape"
@@ -103,7 +168,7 @@ function Carousel() {
       ) : null}
 
       {image5 ? (
-        <div id="carouselImage5" className="carouselImages" ref={refimage5}>
+        <div id="carouselImage5" className="carouselImages">
           <img
             src="https://drive.google.com/uc?export=view&id=1YqV8WvXxF6yB09Q6egrE3fmumM3_JdCZ"
             alt="Abstract girl"
@@ -119,46 +184,48 @@ function Carousel() {
         <i className="fas fa-arrow-alt-circle-right fa-2x"></i>
       </button>
 
-      <button
-        type="button"
-        id="radio1"
-        className="radios"
-        onClick={radioClicked}
-      >
-        <i className="far fa-square"></i>
-      </button>
-      <button
-        type="button"
-        id="radio2"
-        className="radios"
-        onClick={radioClicked}
-      >
-        <i className="far fa-square"></i>
-      </button>
-      <button
-        type="button"
-        id="radio3"
-        className="radios"
-        onClick={radioClicked}
-      >
-        <i className="far fa-square"></i>
-      </button>
-      <button
-        type="button"
-        id="radio4"
-        className="radios"
-        onClick={radioClicked}
-      >
-        <i className="far fa-square"></i>
-      </button>
-      <button
-        type="button"
-        id="radio5"
-        className="radios"
-        onClick={radioClicked}
-      >
-        <i className="far fa-square"></i>
-      </button>
+      <div>
+        <button
+          type="button"
+          id="radio1"
+          className="radios"
+          onClick={radioClicked}
+        >
+          <i className="far fa-square"></i>
+        </button>
+        <button
+          type="button"
+          id="radio2"
+          className="radios"
+          onClick={radioClicked}
+        >
+          <i className="far fa-square"></i>
+        </button>
+        <button
+          type="button"
+          id="radio3"
+          className="radios"
+          onClick={radioClicked}
+        >
+          <i className="far fa-square"></i>
+        </button>
+        <button
+          type="button"
+          id="radio4"
+          className="radios"
+          onClick={radioClicked}
+        >
+          <i className="far fa-square"></i>
+        </button>
+        <button
+          type="button"
+          id="radio5"
+          className="radios"
+          onClick={radioClicked}
+        >
+          <i className="far fa-square"></i>
+        </button>
+      </div>
     </div>
   );
 }
