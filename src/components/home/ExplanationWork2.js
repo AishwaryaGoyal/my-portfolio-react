@@ -1,15 +1,16 @@
 import React from "react";
 import ColorsUsed from "./ColorsUsed";
+import { nanoid } from "nanoid";
 
 function ExplanationWork2() {
   const colors = [
     {
       name: "Prussian Blue",
-      className: "prussianblue",
+      className: "prussianblue colors",
     },
     {
       name: "Cobalt Blue",
-      className: "cobaltblue",
+      className: "cobaltblue colors",
     },
   ];
 
@@ -25,7 +26,7 @@ function ExplanationWork2() {
       colors. This is a video attached on the side that you see here. Go ahead
       and play it to get a zoomed-in view of the painting. The unframed size of
       this painting is 2*2.5 feet.
-      <ColorsUsed colorsUsed={colors} />
+      <ColorsUsed colorsUsed={colors} key={nanoid} />
     </div>
   );
 }

@@ -13,21 +13,10 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-
-        <Route path="/work">
-          <Work />
-        </Route>
-
-        <Route path="/about">
-          <About />
-        </Route>
-
-        <Route path="/">
-          <Home />
-        </Route>
+        <Route path="/contact" component={Contact}></Route>
+        <Route path="/work" component={Work}></Route>
+        <Route path="/about" component={About}></Route>
+        <Route path="/" component={Home}></Route>
       </Switch>
     </Router>
   );

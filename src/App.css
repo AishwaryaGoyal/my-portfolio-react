@@ -37,10 +37,6 @@ body {
 }
 
 /*Header CSS for tablets */
-.btn-contact-handheld:visited,
-.btn-work-handheld:visited {
-  color: black;
-}
 
 .header-handheld {
   height: 4.3rem;
@@ -55,8 +51,7 @@ body {
   transition: height 1s;
 }
 
-.btn-work-handheld,
-.btn-contact-handheld {
+.btn-top-handheld {
   border-bottom: 0.3rem solid #dd5350;
   color: black;
   padding: 0.9rem 2.7rem 0.9rem 2.7rem;
@@ -78,10 +73,13 @@ body {
   left: 13rem;
 }
 
-.btn-work-handheld:hover,
-.btn-contact-handheld:hover {
+.btn-top-handheld:hover {
   background-color: #dd5350;
   color: white !important;
+}
+
+.btn-top-handheld:visited {
+  color: black;
 }
 
 /*Header CSS */
@@ -138,9 +136,7 @@ body {
   font-size: large;
 }
 
-.btn-home,
-.btn-work,
-.btn-about {
+.btn-middle {
   color: black;
   margin-right: 0.5rem;
   padding: 1rem 3.5rem;
@@ -151,15 +147,11 @@ body {
   font-family: "Zen Antique Soft";
 }
 
-.btn-home:focus,
-.btn-work:focus,
-.btn-about:focus {
+.btn-middle:focus {
   border: 0.0625rem solid #dd5350;
 }
 
-.btn-home:hover,
-.btn-work:hover,
-.btn-about:hover {
+.btn-middle:hover {
   background-color: #dd5350;
   color: white;
 }
@@ -315,10 +307,7 @@ body {
 
 /*CSS for mobiles */
 .btn-menu,
-.btn-home-drop,
-.btn-work-drop,
-.btn-contact-drop,
-.btn-about-drop {
+.btn-menu-drop {
   display: none;
   margin-bottom: 0.8rem;
   color: black;
@@ -333,10 +322,7 @@ body {
   color: white;
 }
 
-.btn-home-drop:hover,
-.btn-work-drop:hover,
-.btn-contact-drop:hover,
-.btn-about-drop:hover {
+.btn-menu-drop:hover {
   border-left: 1rem solid #dd5350;
   background-color: #dd5350;
   color: white;
@@ -366,8 +352,7 @@ body {
     display: none;
   }
 
-  .btn-work-handheld,
-  .btn-contact-handheld,
+  .btn-top-handheld,
   .footer {
     display: none;
   }

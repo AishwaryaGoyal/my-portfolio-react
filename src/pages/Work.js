@@ -7,27 +7,26 @@ import BigImage from "../components/work/BigImage";
 import images from "../components/work/Images";
 
 function Work() {
-  const [showBigImage, setShowBigImage] = useState(false);
-  var srcBigImage;
+  const [srcBigImage, setSrcBigImage] = useState(null);
 
   function clickImage(e) {
-    srcBigImage = e.target.src;
-    setShowBigImage(true);
+    setSrcBigImage(e.target.src);
   }
 
-  function btnCloseClicked() {
-    setShowBigImage(false);
+  function btnCloseClicked(e) {
+    setSrcBigImage(null);
   }
 
   return (
     <div id="container" className="container">
       <HeaderHandheld />
       <Header />
-      <div className="works">
-        <Image images={images} onClick={clickImage} />
-      </div>
+
+      <Image images={images} onClick={clickImage} />
+
       <Footer />
-      {showBigImage ? (
+
+      {srcBigImage ? (
         <BigImage src={srcBigImage} btnCloseClicked={btnCloseClicked} />
       ) : null}
     </div>

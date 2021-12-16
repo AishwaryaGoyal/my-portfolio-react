@@ -75,9 +75,7 @@ label {
   margin-bottom: 0.5rem;
 }
 
-#name,
-#mail,
-#msg {
+.inputs {
   border: none;
   margin-bottom: 1.5rem;
   font: 1rem Roboto-Regular;

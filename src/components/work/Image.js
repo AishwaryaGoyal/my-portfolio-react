@@ -1,11 +1,16 @@
 function Image(props) {
-  const videos = props.images.map((prop) => (
-    <div className="img-video-container">
-      <img src={prop.src} alt={prop.alt} onClick={props.onClick} />
+  const videos = props.images.map((prop, index) => (
+    <div className="img-video-container" key={index}>
+      <img
+        src={prop.src}
+        alt={prop.alt}
+        key={prop.src}
+        onClick={props.onClick}
+      />
     </div>
   ));
 
-  return videos;
+  return <div className="works">{videos}</div>;
 }
 
 export default Image;

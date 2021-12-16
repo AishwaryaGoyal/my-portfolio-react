@@ -5,19 +5,19 @@ function HeaderMiddle() {
   return (
     <div className="header-middle">
       <Link to="/home">
-        <button className="btn-home" type="button">
+        <button className="btn-middle" type="button">
           Home
         </button>
       </Link>
 
       <Link to="/work">
-        <button className="btn-work" type="button">
+        <button className="btn-middle" type="button">
           Work
         </button>
       </Link>
 
       <Link to="/about">
-        <button className="btn-about" type="button">
+        <button className="btn-middle" type="button">
           About
         </button>
       </Link>

@@ -51,12 +51,32 @@
   border: 1rem solid #dd5350;
 }
 
-.about-para1,
-.about-para2 {
+.about-paras {
+  text-align: justify;
+  text-justify: auto;
   padding: 1rem;
   font-family: Roboto-Regular;
   font-size: large;
   color: white;
   background-color: #dd5350;
   border-radius: 1rem;
+}
+
+.btn-contactme {
+  color: white;
+  background-color: #dd5350;
+  padding: 1rem 3rem 1rem 3rem;
+  border-radius: 0.2rem;
+  align-self: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.03rem;
+}
+
+.btn-contactme:visited {
+  color: white;
+}
+
+.btn-contactme:hover {
+  background-color: #7c8453;
 }

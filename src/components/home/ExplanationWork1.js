@@ -1,21 +1,27 @@
 import React from "react";
 import ColorsUsed from "./ColorsUsed";
+import { nanoid } from "nanoid";
 
 function ExplanationWork1() {
   const colors = [
     {
+      name: "Burnt Umber",
+      className: "burntumber colors",
+      id: "BU",
+    },
+    {
       name: "Crimson Red",
-      className: "crimsonred",
+      className: "crimsonred colors",
       id: "CR",
     },
     {
       name: "Burnt Sienna",
-      className: "burntsienna",
+      className: "burntsienna colors",
       id: "BS",
     },
     {
       name: "Yellow Ochre",
-      className: "yellowochre",
+      className: "yellowochre colors",
       id: "YO",
     },
   ];
@@ -46,7 +52,7 @@ function ExplanationWork1() {
         </a>
         .
       </p>
-      <ColorsUsed colorsUsed={colors} />
+      <ColorsUsed colorsUsed={colors} key={nanoid} />
     </div>
   );
 }

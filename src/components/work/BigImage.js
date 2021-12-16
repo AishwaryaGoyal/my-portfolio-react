@@ -1,16 +1,16 @@
 import React from "react";
 
 function BigImage(props) {
-  console.log("Inside Big image", props.src);
   return (
-    <div id="transparentDiv">
+    <>
+      <div id="transparentDiv" onClick={props.btnCloseClicked}></div>
       <div id="bigImage">
         <img src={props.src} alt="Big size" />
         <button type="button" id="closeBtn" onClick={props.btnCloseClicked}>
           <i className="far fa-window-close fa-2x"></i>
         </button>
       </div>
-    </div>
+    </>
   );
 }
 

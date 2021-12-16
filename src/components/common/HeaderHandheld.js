@@ -25,13 +25,13 @@ function HeaderHandheld() {
   return (
     <div className="header-handheld" id="headerHandheld">
       <Link to="/work">
-        <button type="button" className="btn-work-handheld">
+        <button type="button" className="btn-work-handheld btn-top-handheld">
           Work
         </button>
       </Link>
 
       <Link to="/contact">
-        <button type="button" className="btn-contact-handheld">
+        <button type="button" className="btn-contact-handheld btn-top-handheld">
           Contact
         </button>
       </Link>
@@ -42,25 +42,25 @@ function HeaderHandheld() {
       </button>
 
       <Link to="/home">
-        <button className="btn-home-drop" id="btnHomeDrop">
+        <button className="btn-menu-drop" id="btnHomeDrop">
           Home
         </button>
       </Link>
 
       <Link to="/work">
-        <button className="btn-work-drop" id="btnWorkDrop">
+        <button className="btn-menu-drop" id="btnWorkDrop">
           Work
         </button>
       </Link>
 
       <Link to="/contact">
-        <button className="btn-contact-drop" id="btnContactDrop">
+        <button className="btn-menu-drop" id="btnContactDrop">
           Contact
         </button>
       </Link>
 
       <Link to="/about">
-        <button className="btn-about-drop" id="btnAboutDrop">
+        <button className="btn-menu-drop" id="btnAboutDrop">
           About
         </button>
       </Link>

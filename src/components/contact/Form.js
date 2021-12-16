@@ -10,7 +10,14 @@ function Form(props) {
             *
           </abbr>
         </label>
-        <input type="text" id="name" name="user_name" required autofocus />
+        <input
+          type="text"
+          id="name"
+          className="inputs"
+          name="user_name"
+          required
+          autofocus
+        />
 
         <label htmlFor="mail">
           E-mail:
@@ -18,7 +25,13 @@ function Form(props) {
             *
           </abbr>
         </label>
-        <input type="email" id="mail" name="user_email" required />
+        <input
+          type="email"
+          id="mail"
+          className="inputs"
+          name="user_email"
+          required
+        />
 
         <label htmlFor="msg">
           Message:
@@ -26,7 +39,12 @@ function Form(props) {
             *
           </abbr>
         </label>
-        <textarea id="msg" name="user_message" required></textarea>
+        <textarea
+          id="msg"
+          className="inputs"
+          name="user_message"
+          required
+        ></textarea>
 
         <button id="btnSubmit" type="submit">
           <strong>Send your message</strong>
