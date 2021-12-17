@@ -12,6 +12,10 @@
   }
 }
 
+Link {
+  text-decoration: none;
+}
+
 img,
 iframe {
   display: block;
@@ -37,7 +41,6 @@ body {
 }
 
 /*Header CSS for tablets */
-
 .header-handheld {
   height: 4.3rem;
   width: 100%;
@@ -63,6 +66,15 @@ body {
   position: absolute;
 }
 
+.btn-top-handheld:hover {
+  background-color: #dd5350;
+  color: white;
+}
+
+.btn-top-handheld:visited {
+  color: black;
+}
+
 .btn-work-handheld {
   left: 0;
   margin-left: 2rem;
@@ -71,15 +83,6 @@ body {
 
 .btn-contact-handheld {
   left: 13rem;
-}
-
-.btn-top-handheld:hover {
-  background-color: #dd5350;
-  color: white !important;
-}
-
-.btn-top-handheld:visited {
-  color: black;
 }
 
 /*Header CSS */
@@ -225,6 +228,28 @@ body {
   color: white;
 }
 
+.btn-menu,
+.btn-menu-drop {
+  display: none;
+  margin-bottom: 0.8rem;
+  color: black;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 0.2rem;
+  font: 1rem sans-serif;
+  transition: background-color 1s;
+}
+
+.fa-bars {
+  color: white;
+}
+
+.btn-menu-drop:hover {
+  border-left: 1rem solid #dd5350;
+  background-color: #dd5350;
+  color: white;
+}
+
 /*For tablets*/
 @media (max-width: 960px) {
   .header,
@@ -234,6 +259,11 @@ body {
 
   .header-handheld {
     display: block;
+  }
+
+  .btn-menu,
+  .btn-menu-drop {
+    display: none;
   }
 
   .footer {
@@ -252,10 +282,6 @@ body {
     /* align-items: flex-start;*/
   }
 
-  video {
-    height: 350px;
-  }
-
   .explanation-work {
     margin-top: 0;
     text-align: center;
@@ -268,10 +294,6 @@ body {
 
   .about-left {
     column-count: 1;
-  }
-
-  label {
-    text-align: left !important;
   }
 
   .works {
@@ -306,28 +328,6 @@ body {
 }
 
 /*CSS for mobiles */
-.btn-menu,
-.btn-menu-drop {
-  display: none;
-  margin-bottom: 0.8rem;
-  color: black;
-  padding: 1rem;
-  width: 100%;
-  border-radius: 0.2rem;
-  font: 1rem sans-serif;
-  transition: background-color 1s;
-}
-
-.fa-bars {
-  color: white;
-}
-
-.btn-menu-drop:hover {
-  border-left: 1rem solid #dd5350;
-  background-color: #dd5350;
-  color: white;
-}
-
 @media (max-width: 390px) {
   .about {
     grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
@@ -344,7 +344,8 @@ body {
 
   #name,
   #mail,
-  #msg {
+  #msg,
+  #btnSubmit {
     width: 18rem;
   }
 
@@ -357,13 +358,22 @@ body {
     display: none;
   }
 
+  .header-handheld.clicked {
+    height: 20.5rem;
+  }
+
   .header-handheld {
+    height: 4.3rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
   }
 
   .btn-menu {
+    display: block;
+  }
+
+  .btn-menu-drop.clicked {
     display: block;
   }
 
@@ -388,11 +398,6 @@ body {
 
   .large-text {
     font-size: 1rem;
-  }
-
-  video {
-    height: 250px;
-    box-shadow: none;
   }
 
   .explanation-work {

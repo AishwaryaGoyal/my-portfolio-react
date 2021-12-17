@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import CarouselRadio from "./CarouselRadio";
+import CarouselImage from "./CarouselImage";
+import images from "./CarouselImages";
 
 function Carousel() {
+  const radioButtons = ["radio1", "radio2", "radio3", "radio4", "radio5"];
   //const refCarousel = React.createRef();
   //console.log("Observer", refCarousel);
 
@@ -14,10 +18,10 @@ function Carousel() {
   const [image4, setImage4] = useState(false);
   const [image5, setImage5] = useState(false);
 
-  const refImage1 = React.createRef();
+  //const refImage1 = React.createRef();
 
-  let currentImage = refImage1;
-  console.log("Current image is ", currentImage);
+  // let currentImage = refImage1;
+  // console.log("Current image is ", currentImage);
 
   let currentRadioId;
 
@@ -127,55 +131,11 @@ function Carousel() {
 
   return (
     <div className="carousel" id="carousel">
-      {image1 ? (
-        <div id="carouselImage1" className="carouselImages" ref={refImage1}>
-          <img
-            src="https://drive.google.com/uc?export=view&id=1pcwAFoDKoq-nQ6GjBs8iMplqKpnj6mFk"
-            alt="Swans in landscape mode"
-            height="100%"
-          />
-        </div>
-      ) : null}
-
-      {image2 ? (
-        <div id="carouselImage2" className="carouselImages">
-          <img
-            src="https://drive.google.com/uc?export=view&id=1WY1lyw1q6KZyrqus2t8nAmfI_qQLe3Ai"
-            alt="Child sitting by a river"
-            height="100%"
-          />
-        </div>
-      ) : null}
-
-      {image3 ? (
-        <div id="carouselImage3" className="carouselImages">
-          <img
-            src="https://drive.google.com/uc?export=view&id=12I6FjVcRu9O9j4FegrurkfKMtydWr9Pg"
-            alt="Seascape"
-            height="100%"
-          />
-        </div>
-      ) : null}
-
-      {image4 ? (
-        <div id="carouselImage4" className="carouselImages">
-          <img
-            src="https://drive.google.com/uc?export=view&id=18F5WkW1AtmjnWRkHsc-8Jp0n1iJoIi6s"
-            alt="Snowscape"
-            height="100%"
-          />
-        </div>
-      ) : null}
-
-      {image5 ? (
-        <div id="carouselImage5" className="carouselImages">
-          <img
-            src="https://drive.google.com/uc?export=view&id=1YqV8WvXxF6yB09Q6egrE3fmumM3_JdCZ"
-            alt="Abstract girl"
-            height="100%"
-          />
-        </div>
-      ) : null}
+      {image1 ? <CarouselImage image={images[0]} /> : null}
+      {image2 ? <CarouselImage image={images[1]} /> : null}
+      {image3 ? <CarouselImage image={images[2]} /> : null}
+      {image4 ? <CarouselImage image={images[3]} /> : null}
+      {image5 ? <CarouselImage image={images[4]} /> : null}
 
       <button id="leftArrow" className="arrows" onClick={leftarrowClicked}>
         <i className="fas fa-arrow-alt-circle-left fa-2x"></i>
@@ -184,48 +144,7 @@ function Carousel() {
         <i className="fas fa-arrow-alt-circle-right fa-2x"></i>
       </button>
 
-      <div>
-        <button
-          type="button"
-          id="radio1"
-          className="radios"
-          onClick={radioClicked}
-        >
-          <i className="far fa-square"></i>
-        </button>
-        <button
-          type="button"
-          id="radio2"
-          className="radios"
-          onClick={radioClicked}
-        >
-          <i className="far fa-square"></i>
-        </button>
-        <button
-          type="button"
-          id="radio3"
-          className="radios"
-          onClick={radioClicked}
-        >
-          <i className="far fa-square"></i>
-        </button>
-        <button
-          type="button"
-          id="radio4"
-          className="radios"
-          onClick={radioClicked}
-        >
-          <i className="far fa-square"></i>
-        </button>
-        <button
-          type="button"
-          id="radio5"
-          className="radios"
-          onClick={radioClicked}
-        >
-          <i className="far fa-square"></i>
-        </button>
-      </div>
+      <CarouselRadio radioButtons={radioButtons} radioClicked={radioClicked} />
     </div>
   );
 }

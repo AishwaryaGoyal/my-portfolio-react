@@ -4,10 +4,6 @@ import Work from "./pages/Work";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import "./styles/home.css";
-import "./styles/work.css";
-import "./styles/about.css";
-import "./styles/contact.css";
 
 function App() {
   return (

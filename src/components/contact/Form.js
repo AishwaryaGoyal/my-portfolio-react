@@ -16,7 +16,7 @@ function Form(props) {
           className="inputs"
           name="user_name"
           required
-          autofocus
+          autoFocus
         />
 
         <label htmlFor="mail">

@@ -5,6 +5,7 @@ import Footer from "../components/common/Footer";
 import Image from "../components/work/Image";
 import BigImage from "../components/work/BigImage";
 import images from "../components/work/Images";
+import "../styles/work.css";
 
 function Work() {
   const [srcBigImage, setSrcBigImage] = useState(null);
@@ -21,11 +22,8 @@ function Work() {
     <div id="container" className="container">
       <HeaderHandheld />
       <Header />
-
       <Image images={images} onClick={clickImage} />
-
       <Footer />
-
       {srcBigImage ? (
         <BigImage src={srcBigImage} btnCloseClicked={btnCloseClicked} />
       ) : null}

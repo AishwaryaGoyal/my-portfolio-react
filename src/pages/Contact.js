@@ -3,6 +3,7 @@ import HeaderHandheld from "../components/common/HeaderHandheld";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
 import Form from "../components/contact/Form";
+import "../styles/contact.css";
 
 function Contact() {
   return (
