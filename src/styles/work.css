@@ -21,8 +21,6 @@
 
 .img-video-container:hover img {
   cursor: zoom-in;
-  /* transform: scale(2);
-    object-fit: contain;*/
 }
 
 #transparentDiv {

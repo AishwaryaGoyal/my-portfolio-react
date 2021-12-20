@@ -3,7 +3,7 @@ import HeaderStart from "./HeaderStart";
 import HeaderMiddle from "./HeaderMiddle";
 import HeaderEnd from "./HeaderEnd";
 
-function Header() {
+function Header(props) {
   return (
     <div className="header">
       <HeaderStart />

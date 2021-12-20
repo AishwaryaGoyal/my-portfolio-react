@@ -1,5 +1,5 @@
 function Image(props) {
-  const videos = props.images.map((prop, index) => (
+  const images = props.images.map((prop, index) => (
     <div className="img-video-container" key={index}>
       <img
         src={prop.src}
@@ -10,7 +10,7 @@ function Image(props) {
     </div>
   ));
 
-  return <div className="works">{videos}</div>;
+  return <div className="works">{images}</div>;
 }
 
 export default Image;

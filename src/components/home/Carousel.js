@@ -2,9 +2,9 @@ import React from "react";
 import CarouselRadio from "./CarouselRadio";
 import CarouselImage from "./CarouselImage";
 import images from "./CarouselImages";
+import radioButtons from "./CarouselRadios";
 
 function Carousel() {
-  const radioButtons = ["radio1", "radio2", "radio3", "radio4", "radio5"];
   const totalImages = radioButtons.length;
 
   let currentRadioId = "radio1",
@@ -14,7 +14,6 @@ function Carousel() {
 
   function onLoadCarousel(e) {
     currentImage = e.target;
-    console.log("Current image is ", currentImage);
     animateCarousel();
   }
 
@@ -60,9 +59,10 @@ function Carousel() {
 
   function rightarrowClicked() {
     clearTimeout(timeoutId);
-    document
-      .getElementById(currentRadioId)
-      .firstElementChild.classList.remove("clicked");
+    const currentRadio = document.getElementById(currentRadioId);
+    if (currentRadio) {
+      currentRadio.firstElementChild.classList.remove("clicked");
+    } else return;
 
     const nextRadioId = radioButtons[currentRadioNumber + 1] || radioButtons[0];
     document

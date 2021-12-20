@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <div className="footer">
-      <Link to="/home">
+      <Link to="/">
         <button type="button" className="btn-home-footer">
           <i className="fas fa-home fa-2x"></i>
         </button>

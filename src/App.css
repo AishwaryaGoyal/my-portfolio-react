@@ -137,7 +137,9 @@ body {
   border: 0.0625rem solid #dd5350;
 }
 
-.btn-middle:hover {
+.btn-middle:hover,
+#btnHomeHeader.home,
+#btnWorkHeader.work {
   background-color: #dd5350;
   color: white;
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import ColorsUsed from "./ColorsUsed";
-import { nanoid } from "nanoid";
 
 function ExplanationWork1() {
   const colors = [
@@ -52,7 +51,7 @@ function ExplanationWork1() {
         </a>
         .
       </p>
-      <ColorsUsed colorsUsed={colors} key={nanoid} />
+      <ColorsUsed colorsUsed={colors} />
     </div>
   );
 }

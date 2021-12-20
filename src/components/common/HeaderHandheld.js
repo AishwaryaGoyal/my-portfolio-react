@@ -29,7 +29,7 @@ function HeaderHandheld() {
         <i className="fas fa-bars fa-2x"></i>
       </button>
 
-      <Link to="/home" style={{ textDecoration: "none" }}>
+      <Link to="/" style={{ textDecoration: "none" }}>
         <button type="button" className="btn-menu-drop">
           Home
         </button>
