@@ -5,14 +5,16 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 
-function App() {
+function App(props) {
   return (
     <Router>
       <Switch>
         <Route path="/contact" component={Contact}></Route>
         <Route path="/work" component={Work}></Route>
         <Route path="/about" component={About}></Route>
-        <Route path="/" component={Home}></Route>
+        <Route path="/">
+          <Home />
+        </Route>
       </Switch>
     </Router>
   );

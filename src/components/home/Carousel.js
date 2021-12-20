@@ -1,141 +1,84 @@
-import React, { useState } from "react";
+import React from "react";
 import CarouselRadio from "./CarouselRadio";
 import CarouselImage from "./CarouselImage";
 import images from "./CarouselImages";
 
 function Carousel() {
   const radioButtons = ["radio1", "radio2", "radio3", "radio4", "radio5"];
-  //const refCarousel = React.createRef();
-  //console.log("Observer", refCarousel);
+  const totalImages = radioButtons.length;
 
-  //const observer = new IntersectionObserver(animateCarousel, {threshold: 0.5,});
+  let currentRadioId = "radio1",
+    currentRadioNumber = 0;
+  let currentImage;
+  let timeoutId;
 
-  //observer.observe(refCarousel);
+  function onLoadCarousel(e) {
+    currentImage = e.target;
+    console.log("Current image is ", currentImage);
+    animateCarousel();
+  }
 
-  const [image1, setImage1] = useState(true);
-  const [image2, setImage2] = useState(false);
-  const [image3, setImage3] = useState(false);
-  const [image4, setImage4] = useState(false);
-  const [image5, setImage5] = useState(false);
-
-  //const refImage1 = React.createRef();
-
-  // let currentImage = refImage1;
-  // console.log("Current image is ", currentImage);
-
-  let currentRadioId;
+  function animateCarousel() {
+    timeoutId = setTimeout(rightarrowClicked, 2000);
+  }
 
   function radioClicked(e) {
-    currentRadioId = e.currentTarget.id;
-
+    clearTimeout(timeoutId);
     document
-      .querySelectorAll(".fa-square")
-      .forEach((el) => el.classList.remove("clicked"));
+      .getElementById(currentRadioId)
+      .firstElementChild.classList.remove("clicked");
+
+    currentRadioId = e.currentTarget.id;
+    currentRadioNumber = radioButtons.indexOf(currentRadioId);
+
+    currentImage.key = images[currentRadioNumber].key;
+    currentImage.src = images[currentRadioNumber].src;
+    currentImage.alt = images[currentRadioNumber].alt;
 
     e.target.classList.add("clicked");
-
-    setImage1(false);
-    setImage2(false);
-    setImage3(false);
-    setImage4(false);
-    setImage5(false);
-
-    if (currentRadioId === "radio1") {
-      setImage1(true);
-    } else if (currentRadioId === "radio2") {
-      setImage2(true);
-    } else if (currentRadioId === "radio3") {
-      setImage3(true);
-    } else if (currentRadioId === "radio4") {
-      setImage4(true);
-    } else {
-      setImage5(true);
-    }
   }
 
   function leftarrowClicked() {
+    clearTimeout(timeoutId);
     document
-      .querySelectorAll(".fa-square")
-      .forEach((el) => el.classList.remove("clicked"));
+      .getElementById(currentRadioId)
+      .firstElementChild.classList.remove("clicked");
 
-    if (image1) {
-      document
-        .getElementById("radio5")
-        .firstElementChild.classList.add("clicked");
-      setImage5(true);
-      setImage1(false);
-    } else if (image2) {
-      document
-        .getElementById("radio1")
-        .firstElementChild.classList.add("clicked");
-      setImage1(true);
-      setImage2(false);
-    } else if (image3) {
-      document
-        .getElementById("radio2")
-        .firstElementChild.classList.add("clicked");
-      setImage2(true);
-      setImage3(false);
-    } else if (image4) {
-      document
-        .getElementById("radio3")
-        .firstElementChild.classList.add("clicked");
-      setImage3(true);
-      setImage4(false);
-    } else {
-      document
-        .getElementById("radio4")
-        .firstElementChild.classList.add("clicked");
-      setImage4(true);
-      setImage5(false);
-    }
+    const prevRadioId =
+      radioButtons[currentRadioNumber - 1] || radioButtons[totalImages - 1];
+
+    document
+      .getElementById(prevRadioId)
+      .firstElementChild.classList.add("clicked");
+
+    currentRadioId = prevRadioId;
+    currentRadioNumber = radioButtons.indexOf(currentRadioId);
+    currentImage.key = images[currentRadioNumber].key;
+    currentImage.src = images[currentRadioNumber].src;
+    currentImage.alt = images[currentRadioNumber].alt;
   }
 
   function rightarrowClicked() {
+    clearTimeout(timeoutId);
     document
-      .querySelectorAll(".fa-square")
-      .forEach((el) => el.classList.remove("clicked"));
+      .getElementById(currentRadioId)
+      .firstElementChild.classList.remove("clicked");
 
-    if (image1) {
-      document
-        .getElementById("radio2")
-        .firstElementChild.classList.add("clicked");
-      setImage2(true);
-      setImage1(false);
-    } else if (image2) {
-      document
-        .getElementById("radio3")
-        .firstElementChild.classList.add("clicked");
-      setImage3(true);
-      setImage2(false);
-    } else if (image3) {
-      document
-        .getElementById("radio4")
-        .firstElementChild.classList.add("clicked");
-      setImage4(true);
-      setImage3(false);
-    } else if (image4) {
-      document
-        .getElementById("radio5")
-        .firstElementChild.classList.add("clicked");
-      setImage5(true);
-      setImage4(false);
-    } else {
-      document
-        .getElementById("radio1")
-        .firstElementChild.classList.add("clicked");
-      setImage1(true);
-      setImage5(false);
-    }
+    const nextRadioId = radioButtons[currentRadioNumber + 1] || radioButtons[0];
+    document
+      .getElementById(nextRadioId)
+      .firstElementChild.classList.add("clicked");
+
+    currentRadioId = nextRadioId;
+    currentRadioNumber = radioButtons.indexOf(currentRadioId);
+    currentImage.key = images[currentRadioNumber].key;
+    currentImage.src = images[currentRadioNumber].src;
+    currentImage.alt = images[currentRadioNumber].alt;
   }
 
   return (
-    <div className="carousel" id="carousel">
-      {image1 ? <CarouselImage image={images[0]} /> : null}
-      {image2 ? <CarouselImage image={images[1]} /> : null}
-      {image3 ? <CarouselImage image={images[2]} /> : null}
-      {image4 ? <CarouselImage image={images[3]} /> : null}
-      {image5 ? <CarouselImage image={images[4]} /> : null}
+    <div className="carousel" id="carousel" onLoad={onLoadCarousel}>
+      <CarouselImage image={images[0]} />
 
       <button id="leftArrow" className="arrows" onClick={leftarrowClicked}>
         <i className="fas fa-arrow-alt-circle-left fa-2x"></i>

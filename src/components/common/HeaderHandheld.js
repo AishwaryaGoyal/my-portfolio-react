@@ -29,26 +29,26 @@ function HeaderHandheld() {
         <i className="fas fa-bars fa-2x"></i>
       </button>
 
-      <Link to="/home">
-        <button className="btn-menu-drop" id="btnHomeDrop">
+      <Link to="/home" style={{ textDecoration: "none" }}>
+        <button type="button" className="btn-menu-drop">
           Home
         </button>
       </Link>
 
-      <Link to="/work">
-        <button className="btn-menu-drop" id="btnWorkDrop">
+      <Link to="/work" style={{ textDecoration: "none" }}>
+        <button type="button" className="btn-menu-drop">
           Work
         </button>
       </Link>
 
-      <Link to="/contact">
-        <button className="btn-menu-drop" id="btnContactDrop">
+      <Link to="/contact" style={{ textDecoration: "none" }}>
+        <button type="button" className="btn-menu-drop">
           Contact
         </button>
       </Link>
 
-      <Link to="/about">
-        <button className="btn-menu-drop" id="btnAboutDrop">
+      <Link to="/about" style={{ textDecoration: "none" }}>
+        <button type="button" className="btn-menu-drop">
           About
         </button>
       </Link>

@@ -4,7 +4,7 @@ function Video(props) {
       <iframe
         title={props.title}
         src={props.src}
-        height="450"
+        height="430"
         allow="autoplay"
       ></iframe>
     </div>
