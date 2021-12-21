@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function HeaderHandheld() {
+function HeaderHandheld(props) {
   function menuClick() {
     const header = document.getElementById("headerHandheld");
     const menuBtns = document.querySelectorAll(".btn-menu-drop");
@@ -11,21 +11,13 @@ function HeaderHandheld() {
   }
 
   return (
-    <div className="header-handheld" id="headerHandheld">
-      <Link to="/work" style={{ textDecoration: "none" }}>
-        <button type="button" id="btnWorkHandheld" className="btn-top-handheld">
-          Work
-        </button>
+    <div className="header-handheld">
+      <Link to="/work" className={`btn-work-handheld ${props.onWork}`}>
+        Work
       </Link>
 
-      <Link to="/contact" style={{ textDecoration: "none" }}>
-        <button
-          type="button"
-          id="btnContactHandheld"
-          className="btn-top-handheld"
-        >
-          Contact
-        </button>
+      <Link to="/contact" className={`btn-contact-handheld ${props.onContact}`}>
+        Contact
       </Link>
 
       {/*--For mobile devices---floating menu--*/}
@@ -33,28 +25,20 @@ function HeaderHandheld() {
         <i className="fas fa-bars fa-2x"></i>
       </button>
 
-      <Link to="/" style={{ textDecoration: "none" }}>
-        <button type="button" className="btn-menu-drop">
-          Home
-        </button>
+      <Link to="/" className="btn-menu-drop">
+        Home
       </Link>
 
-      <Link to="/work" style={{ textDecoration: "none" }}>
-        <button type="button" className="btn-menu-drop">
-          Work
-        </button>
+      <Link to="/work" className="btn-menu-drop">
+        Work
       </Link>
 
-      <Link to="/contact" style={{ textDecoration: "none" }}>
-        <button type="button" className="btn-menu-drop">
-          Contact
-        </button>
+      <Link to="/contact" className="btn-menu-drop">
+        Contact
       </Link>
 
-      <Link to="/about" style={{ textDecoration: "none" }}>
-        <button type="button" className="btn-menu-drop">
-          About
-        </button>
+      <Link to="/about" className="btn-menu-drop">
+        About
       </Link>
     </div>
   );

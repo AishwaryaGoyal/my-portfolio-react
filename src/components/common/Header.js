@@ -7,7 +7,11 @@ function Header(props) {
   return (
     <div className="header">
       <HeaderStart />
-      <HeaderMiddle />
+      <HeaderMiddle
+        onHome={props.onHome}
+        onWork={props.onWork}
+        onAbout={props.onAbout}
+      />
       <HeaderEnd />
     </div>
   );

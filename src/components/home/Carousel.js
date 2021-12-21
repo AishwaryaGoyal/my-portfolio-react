@@ -59,6 +59,7 @@ function Carousel() {
 
   function rightarrowClicked() {
     clearTimeout(timeoutId);
+    // console.log(currentImage);
     const currentRadio = document.getElementById(currentRadioId);
     if (currentRadio) {
       currentRadio.firstElementChild.classList.remove("clicked");

@@ -50,7 +50,9 @@ body {
   transition: height 1s;
 }
 
-.btn-top-handheld {
+.btn-work-handheld,
+.btn-contact-handheld {
+  text-decoration: none;
   border-bottom: 0.3rem solid #dd5350;
   color: black;
   padding: 1.2rem 3.95rem;
@@ -59,15 +61,12 @@ body {
   transition: background-color 1s;
 }
 
-.btn-top-handheld:hover,
-#btnWorkHandheld.work,
-#btnContactHandheld.contact {
+.btn-work-handheld:hover,
+.btn-contact-handheld:hover,
+.btn-work-handheld.onWork,
+.btn-contact-handheld.onContact {
   background-color: #dd5350;
   color: white;
-}
-
-.btn-top-handheld:visited {
-  color: black;
 }
 
 /*Header CSS */
@@ -94,6 +93,10 @@ body {
   display: flex;
   justify-content: center;
   margin-left: auto;
+}
+
+.about-aurora {
+  text-decoration: none;
 }
 
 .emoji {
@@ -124,7 +127,10 @@ body {
   font-size: large;
 }
 
-.btn-middle {
+.home-btn,
+.work-btn,
+.about-btn {
+  text-decoration: none;
   color: black;
   margin-right: 0.5rem;
   padding: 1rem 3.5rem;
@@ -135,14 +141,18 @@ body {
   font-family: "Zen Antique Soft";
 }
 
-.btn-middle:focus {
+.home-btn:focus,
+.work-btn:focus,
+.about-btn:focus {
   border: 0.0625rem solid #dd5350;
 }
 
-.btn-middle:hover,
-#btnHomeHeader.home,
-#btnWorkHeader.work,
-#btnAboutHeader.about {
+.home-btn:hover,
+.work-btn:hover,
+.about-btn:hover,
+.home-btn.onHome,
+.work-btn.onWork,
+.about-btn.onAbout {
   background-color: #dd5350;
   color: white;
 }
@@ -207,19 +217,25 @@ body {
   display: none;
 }
 
-#btnHomeFooter {
+.btn-home-footer {
   margin-right: 2rem;
 }
 
-#btnHomeFooter:hover .fa-home,
-#btnAboutFooter:hover .fa-user-circle,
-#btnHomeFooter.home .fa-home,
-#btnAboutFooter.about .fa-user-circle {
+.btn-home-footer,
+.btn-about-footer {
+  color: black;
+}
+
+.btn-home-footer:hover,
+.btn-about-footer:hover,
+.btn-home-footer.onHome,
+.btn-about-footer.onAbout {
   color: white;
 }
 
 .btn-menu,
 .btn-menu-drop {
+  text-decoration: none;
   display: none;
   margin-bottom: 0.8rem;
   color: black;
@@ -345,7 +361,8 @@ body {
     display: none;
   }
 
-  .btn-top-handheld,
+  .btn-work-handheld,
+  .btn-contact-handheld,
   .footer {
     display: none;
   }

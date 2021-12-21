@@ -1,19 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Footer() {
+function Footer(props) {
   return (
     <div className="footer">
-      <Link to="/" style={{ textDecoration: "none" }}>
-        <button type="button" id="btnHomeFooter">
-          <i className="fas fa-home fa-2x"></i>
-        </button>
+      <Link to="/" className={`btn-home-footer ${props.onHome}`}>
+        <i className="fas fa-home fa-2x"></i>
       </Link>
 
-      <Link to="/about" style={{ textDecoration: "none" }}>
-        <button type="button" id="btnAboutFooter">
-          <i className="fas fa-user-circle fa-2x"></i>
-        </button>
+      <Link to="/about" className={`btn-about-footer ${props.onAbout}`}>
+        <i className="fas fa-user-circle fa-2x"></i>
       </Link>
     </div>
   );

@@ -7,7 +7,7 @@ import BigImage from "../components/work/BigImage";
 import images from "../components/work/Images";
 import "../styles/work.css";
 
-function Work() {
+function Work(props) {
   const [srcBigImage, setSrcBigImage] = useState(null);
 
   function clickImage(e) {
@@ -18,17 +18,10 @@ function Work() {
     setSrcBigImage(null);
   }
 
-  function onLoadWork() {
-    const btnWork = document.getElementById("btnWorkHeader");
-    btnWork.classList.add("work");
-    const btnWorkHandheld = document.getElementById("btnWorkHandheld");
-    btnWorkHandheld.classList.add("work");
-  }
-
   return (
-    <div id="container" className="container" onLoad={onLoadWork}>
-      <HeaderHandheld />
-      <Header />
+    <div id="container" className="container">
+      <HeaderHandheld onWork={props.onWork} />
+      <Header onWork={props.onWork} />
       <Image images={images} onClick={clickImage} />
       <Footer />
       {srcBigImage ? (

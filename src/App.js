@@ -5,15 +5,21 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 
-function App(props) {
+function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/contact" component={Contact}></Route>
-        <Route path="/work" component={Work}></Route>
-        <Route path="/about" component={About}></Route>
+        <Route path="/contact">
+          <Contact onContact="onContact" />
+        </Route>
+        <Route path="/work">
+          <Work onWork="onWork" />
+        </Route>
+        <Route path="/about">
+          <About onAbout="onAbout" />
+        </Route>
         <Route path="/">
-          <Home />
+          <Home onHome="onHome" />
         </Route>
       </Switch>
     </Router>

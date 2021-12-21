@@ -7,21 +7,16 @@ import Carousel from "../components/home/Carousel";
 import Footer from "../components/common/Footer";
 import "../styles/home.css";
 
-function Home() {
-  function onLoadHome() {
-    const btnHome = document.getElementById("btnHomeHeader");
-    btnHome.classList.add("home");
-    const btnHomeFooter = document.getElementById("btnHomeFooter");
-    btnHomeFooter.classList.add("home");
-  }
+function Home(props) {
+  console.log("on home is ", props.onHome);
   return (
-    <div className="container" onLoad={onLoadHome}>
+    <div className="container">
       <HeaderHandheld />
-      <Header />
+      <Header onHome={props.onHome} />
       <Content />
       <Works />
       <Carousel />
-      <Footer />
+      <Footer onHome={props.onHome} />
     </div>
   );
 }

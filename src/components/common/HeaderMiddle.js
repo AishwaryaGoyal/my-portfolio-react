@@ -1,25 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function HeaderMiddle() {
+function HeaderMiddle(props) {
   return (
     <div className="header-middle">
-      <Link to="/" style={{ textDecoration: "none" }}>
-        <button className="btn-middle" id="btnHomeHeader" type="button">
-          Home
-        </button>
+      <Link to="/" className={`home-btn ${props.onHome}`}>
+        Home
       </Link>
 
-      <Link to="/work" style={{ textDecoration: "none" }}>
-        <button className="btn-middle" id="btnWorkHeader" type="button">
-          Work
-        </button>
+      <Link to="/work" className={`work-btn ${props.onWork}`}>
+        Work
       </Link>
 
-      <Link to="/about" style={{ textDecoration: "none" }}>
-        <button className="btn-middle" id="btnAboutHeader" type="button">
-          About
-        </button>
+      <Link to="/about" className={`about-btn ${props.onAbout}`}>
+        About
       </Link>
     </div>
   );
