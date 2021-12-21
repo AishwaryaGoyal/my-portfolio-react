@@ -218,7 +218,7 @@ body {
 }
 
 .btn-home-footer {
-  margin-right: 2rem;
+  margin-right: 4rem;
 }
 
 .btn-home-footer,
@@ -266,6 +266,7 @@ body {
 
   .header-handheld {
     display: flex;
+    align-items: center;
     justify-content: space-around;
   }
 
