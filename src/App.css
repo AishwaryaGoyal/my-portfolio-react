@@ -259,6 +259,10 @@ body {
 
 /*For tablets*/
 @media (max-width: 960px) {
+  .div-image-avatar > img {
+    width: 100%;
+  }
+
   .header,
   .btn-contactus {
     display: none;

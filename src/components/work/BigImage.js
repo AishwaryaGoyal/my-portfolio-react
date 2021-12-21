@@ -3,7 +3,7 @@ import React from "react";
 function BigImage(props) {
   return (
     <>
-      <div id="transparentDiv" onClick={props.btnCloseClicked}></div>
+      <div id="transparentDiv"></div>
       <div id="bigImage">
         <img src={props.src} alt="Big size" />
         <button type="button" id="closeBtn" onClick={props.btnCloseClicked}>

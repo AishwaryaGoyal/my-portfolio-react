@@ -6,10 +6,12 @@ function ExplanationWork2() {
     {
       name: "Prussian Blue",
       className: "prussianblue colors",
+      id: "PB",
     },
     {
       name: "Cobalt Blue",
       className: "cobaltblue colors",
+      id: "CB",
     },
   ];
 
