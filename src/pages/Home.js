@@ -8,8 +8,14 @@ import Footer from "../components/common/Footer";
 import "../styles/home.css";
 
 function Home() {
+  function onLoadHome() {
+    const btnHome = document.getElementById("btnHomeHeader");
+    btnHome.classList.add("home");
+    const btnHomeFooter = document.getElementById("btnHomeFooter");
+    btnHomeFooter.classList.add("home");
+  }
   return (
-    <div className="container">
+    <div className="container" onLoad={onLoadHome}>
       <HeaderHandheld />
       <Header />
       <Content />

@@ -12,14 +12,18 @@ function HeaderHandheld() {
 
   return (
     <div className="header-handheld" id="headerHandheld">
-      <Link to="/work">
-        <button type="button" className="btn-work-handheld btn-top-handheld">
+      <Link to="/work" style={{ textDecoration: "none" }}>
+        <button type="button" id="btnWorkHandheld" className="btn-top-handheld">
           Work
         </button>
       </Link>
 
-      <Link to="/contact">
-        <button type="button" className="btn-contact-handheld btn-top-handheld">
+      <Link to="/contact" style={{ textDecoration: "none" }}>
+        <button
+          type="button"
+          id="btnContactHandheld"
+          className="btn-top-handheld"
+        >
           Contact
         </button>
       </Link>

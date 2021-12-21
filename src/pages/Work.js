@@ -18,8 +18,15 @@ function Work() {
     setSrcBigImage(null);
   }
 
+  function onLoadWork() {
+    const btnWork = document.getElementById("btnWorkHeader");
+    btnWork.classList.add("work");
+    const btnWorkHandheld = document.getElementById("btnWorkHandheld");
+    btnWorkHandheld.classList.add("work");
+  }
+
   return (
-    <div id="container" className="container">
+    <div id="container" className="container" onLoad={onLoadWork}>
       <HeaderHandheld />
       <Header />
       <Image images={images} onClick={clickImage} />

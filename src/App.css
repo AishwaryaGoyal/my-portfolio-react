@@ -59,7 +59,9 @@ body {
   transition: background-color 1s;
 }
 
-.btn-top-handheld:hover {
+.btn-top-handheld:hover,
+#btnWorkHandheld.work,
+#btnContactHandheld.contact {
   background-color: #dd5350;
   color: white;
 }
@@ -139,7 +141,8 @@ body {
 
 .btn-middle:hover,
 #btnHomeHeader.home,
-#btnWorkHeader.work {
+#btnWorkHeader.work,
+#btnAboutHeader.about {
   background-color: #dd5350;
   color: white;
 }
@@ -204,12 +207,14 @@ body {
   display: none;
 }
 
-.btn-home-footer {
+#btnHomeFooter {
   margin-right: 2rem;
 }
 
-.btn-home-footer:hover .fa-home,
-.btn-about-footer:hover .fa-user-circle {
+#btnHomeFooter:hover .fa-home,
+#btnAboutFooter:hover .fa-user-circle,
+#btnHomeFooter.home .fa-home,
+#btnAboutFooter.about .fa-user-circle {
   color: white;
 }
 

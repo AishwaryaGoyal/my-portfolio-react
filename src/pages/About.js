@@ -6,8 +6,14 @@ import Footer from "../components/common/Footer";
 import "../styles/about.css";
 
 function About() {
+  function onLoadAbout() {
+    const btnAbout = document.getElementById("btnAboutHeader");
+    btnAbout.classList.add("about");
+    const btnAboutFooter = document.getElementById("btnAboutFooter");
+    btnAboutFooter.classList.add("about");
+  }
   return (
-    <div className="container">
+    <div className="container" onLoad={onLoadAbout}>
       <HeaderHandheld />
       <Header />
       <Content />
