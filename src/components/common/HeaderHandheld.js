@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function HeaderHandheld(props) {
   function menuClick() {
-    const header = document.getElementById("headerHandheld");
+    const header = document.querySelector(".header-handheld");
     const menuBtns = document.querySelectorAll(".btn-menu-drop");
 
     menuBtns.forEach((el) => el.classList.toggle("clicked"));

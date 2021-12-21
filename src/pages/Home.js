@@ -8,7 +8,6 @@ import Footer from "../components/common/Footer";
 import "../styles/home.css";
 
 function Home(props) {
-  console.log("on home is ", props.onHome);
   return (
     <div className="container">
       <HeaderHandheld />
