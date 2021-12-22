@@ -15,7 +15,7 @@ function AboutLeft() {
       </h1>
       <img
         className="img-mypic"
-        alt="Artist herself"
+        alt="Artist"
         src="https://drive.google.com/uc?export=view&id=122GvSKiXiPb_znfPxIdCjFgP6WggI4g_"
       />
     </div>

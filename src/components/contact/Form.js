@@ -2,7 +2,7 @@ import React from "react";
 
 function Form(props) {
   return (
-    <div className="contact">
+    <main className="contact">
       <form action="https://formspree.io/f/xyylqqkn" method="post">
         <label htmlFor="name">
           Name:{" "}
@@ -52,7 +52,7 @@ function Form(props) {
 
         <p>We will get back to you as soon as possible. ^_^</p>
       </form>
-    </div>
+    </main>
   );
 }
 

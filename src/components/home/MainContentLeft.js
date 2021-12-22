@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Button from "../common/Button";
 
-function ContentLeft() {
+function MainContentLeft() {
   return (
     <div className="div-intro-text">
       <h1 className="vlarge-text">Bringing to you. Aurora!</h1>
@@ -19,12 +20,10 @@ function ContentLeft() {
 
       <Link to="/contact">
         {" "}
-        <button type="button" className="btn-contactus">
-          Contact Us
-        </button>
+        <Button classNames="btn-contactus" text="Contact Us" />
       </Link>
     </div>
   );
 }
 
-export default ContentLeft;
+export default MainContentLeft;

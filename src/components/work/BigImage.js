@@ -1,4 +1,5 @@
 import React from "react";
+import ButtonIcon from "../common/ButtonIcon";
 
 function BigImage(props) {
   return (
@@ -6,9 +7,11 @@ function BigImage(props) {
       <div id="transparentDiv"></div>
       <div id="bigImage">
         <img src={props.src} alt="Big size" />
-        <button type="button" id="closeBtn" onClick={props.btnCloseClicked}>
-          <i className="far fa-window-close fa-2x"></i>
-        </button>
+        <ButtonIcon
+          id="closeBtn"
+          onClick={props.btnCloseClicked}
+          iClassNames="far fa-window-close fa-2x"
+        />
       </div>
     </>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/common/Header";
 import HeaderHandheld from "../components/common/HeaderHandheld";
-import Content from "../components/home/Content";
+import MainContent from "../components/home/MainContent";
 import Works from "../components/home/Works";
 import Carousel from "../components/home/Carousel";
 import Footer from "../components/common/Footer";
@@ -12,7 +12,7 @@ function Home(props) {
     <div className="container">
       <HeaderHandheld />
       <Header onHome={props.onHome} />
-      <Content />
+      <MainContent />
       <Works />
       <Carousel />
       <Footer onHome={props.onHome} />

@@ -2,13 +2,13 @@ import React from "react";
 import AboutLeft from "./AboutLeft";
 import AboutRight from "./AboutRight";
 
-function Content() {
+function MainContent() {
   return (
-    <div className="about">
+    <main className="about">
       <AboutLeft />
       <AboutRight />
-    </div>
+    </main>
   );
 }
 
-export default Content;
+export default MainContent;

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Footer(props) {
   return (
-    <div className="footer">
+    <footer className="footer">
       <Link to="/" className={`btn-home-footer ${props.onHome}`}>
         <i className="fas fa-home fa-2x"></i>
       </Link>
@@ -11,7 +11,7 @@ function Footer(props) {
       <Link to="/about" className={`btn-about-footer ${props.onAbout}`}>
         <i className="fas fa-user-circle fa-2x"></i>
       </Link>
-    </div>
+    </footer>
   );
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-function ContentRight() {
+function MainContentRight() {
   return (
     <div className="div-image-avatar">
       <img
@@ -11,4 +11,4 @@ function ContentRight() {
   );
 }
 
-export default ContentRight;
+export default MainContentRight;

@@ -1,7 +1,7 @@
 import React from "react";
 import HeaderHandheld from "../components/common/HeaderHandheld";
 import Header from "../components/common/Header";
-import Content from "../components/about/Content";
+import MainContent from "../components/about/MainContent";
 import Footer from "../components/common/Footer";
 import "../styles/about.css";
 
@@ -10,7 +10,7 @@ function About(props) {
     <div className="container">
       <HeaderHandheld />
       <Header onAbout={props.onAbout} />
-      <Content />
+      <MainContent />
       <Footer onAbout={props.onAbout} />
     </div>
   );

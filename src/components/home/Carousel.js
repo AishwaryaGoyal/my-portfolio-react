@@ -3,6 +3,7 @@ import CarouselRadio from "./CarouselRadio";
 import CarouselImage from "./CarouselImage";
 import images from "./CarouselImages";
 import radioButtons from "./CarouselRadios";
+import ButtonIcon from "../common/ButtonIcon";
 
 function Carousel() {
   const totalImages = radioButtons.length;
@@ -28,7 +29,9 @@ function Carousel() {
       .firstElementChild.classList.remove("clicked");
 
     currentRadioId = e.currentTarget.id;
-    currentRadioNumber = radioButtons.indexOf(currentRadioId);
+    currentRadioNumber = radioButtons.findIndex(
+      (radio) => radio.id === currentRadioId
+    );
 
     currentImage.key = images[currentRadioNumber].key;
     currentImage.src = images[currentRadioNumber].src;
@@ -43,15 +46,18 @@ function Carousel() {
       .getElementById(currentRadioId)
       .firstElementChild.classList.remove("clicked");
 
-    const prevRadioId =
-      radioButtons[currentRadioNumber - 1] || radioButtons[totalImages - 1];
+    const prevRadioId = (
+      radioButtons[currentRadioNumber - 1] || radioButtons[totalImages - 1]
+    ).id;
 
     document
       .getElementById(prevRadioId)
       .firstElementChild.classList.add("clicked");
 
     currentRadioId = prevRadioId;
-    currentRadioNumber = radioButtons.indexOf(currentRadioId);
+    currentRadioNumber = radioButtons.findIndex(
+      (radio) => radio.id === currentRadioId
+    );
     currentImage.key = images[currentRadioNumber].key;
     currentImage.src = images[currentRadioNumber].src;
     currentImage.alt = images[currentRadioNumber].alt;
@@ -65,13 +71,17 @@ function Carousel() {
       currentRadio.firstElementChild.classList.remove("clicked");
     } else return;
 
-    const nextRadioId = radioButtons[currentRadioNumber + 1] || radioButtons[0];
+    const nextRadioId = (
+      radioButtons[currentRadioNumber + 1] || radioButtons[0]
+    ).id;
     document
       .getElementById(nextRadioId)
       .firstElementChild.classList.add("clicked");
 
     currentRadioId = nextRadioId;
-    currentRadioNumber = radioButtons.indexOf(currentRadioId);
+    currentRadioNumber = radioButtons.findIndex(
+      (radio) => radio.id === currentRadioId
+    );
     currentImage.key = images[currentRadioNumber].key;
     currentImage.src = images[currentRadioNumber].src;
     currentImage.alt = images[currentRadioNumber].alt;
@@ -80,15 +90,24 @@ function Carousel() {
   return (
     <div className="carousel" id="carousel" onLoad={onLoadCarousel}>
       <CarouselImage image={images[0]} />
-
-      <button id="leftArrow" className="arrows" onClick={leftarrowClicked}>
-        <i className="fas fa-arrow-alt-circle-left fa-2x"></i>
-      </button>
-      <button id="rightArrow" className="arrows" onClick={rightarrowClicked}>
-        <i className="fas fa-arrow-alt-circle-right fa-2x"></i>
-      </button>
-
-      <CarouselRadio radioButtons={radioButtons} radioClicked={radioClicked} />
+      <ButtonIcon
+        id="leftArrow"
+        classNames="arrows"
+        onClick={leftarrowClicked}
+        iClassNames="fas fa-arrow-alt-circle-left fa-2x"
+      />
+      <ButtonIcon
+        id="rightArrow"
+        classNames="arrows"
+        onClick={rightarrowClicked}
+        iClassNames="fas fa-arrow-alt-circle-right fa-2x"
+      />
+      <CarouselRadio
+        radioButtons={radioButtons}
+        onClick={radioClicked}
+        classNames="radios"
+        iClassNames="far fa-square"
+      />
     </div>
   );
 }

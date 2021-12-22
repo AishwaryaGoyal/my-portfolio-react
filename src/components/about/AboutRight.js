@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Button from "../common/Button";
 
 function AboutRight() {
   return (
@@ -36,9 +37,7 @@ function AboutRight() {
       <h1>Aishwarya Goyal</h1>
       <Link to="/contact">
         {" "}
-        <button type="button" className="btn-contactme">
-          Contact Me
-        </button>
+        <Button classNames="btn-contactme" text="Contact Me" />
       </Link>
     </div>
   );

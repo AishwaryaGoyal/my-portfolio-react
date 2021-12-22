@@ -10,7 +10,7 @@ function Image(props) {
     </div>
   ));
 
-  return <div className="works">{images}</div>;
+  return <main className="works">{images}</main>;
 }
 
 export default Image;
