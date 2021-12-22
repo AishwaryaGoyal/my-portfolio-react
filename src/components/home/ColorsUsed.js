@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../common/Button";
 
 function ColorsUsed(props) {
   return (
@@ -6,9 +7,7 @@ function ColorsUsed(props) {
       <p>Colors mostly used:</p>
       {props.colorsUsed.map((color, index) => (
         <div className={color.className} key={color.id}>
-          <button type="button" key={index}>
-            {color.name}
-          </button>
+          <Button key={index} text={color.name} classNames="color-btn" />
         </div>
       ))}
     </>

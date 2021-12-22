@@ -100,3 +100,41 @@
 .fa-window-close {
   color: white;
 }
+
+.arrows-big {
+  position: absolute;
+  top: 45%;
+  transition: all 1s cubic-bezier(0.29, 2.01, 0.5, -0.68);
+  animation: fade-in-arrows 2s;
+}
+
+#leftArrowBig {
+  right: 85%;
+}
+
+#rightArrowBig {
+  left: 85%;
+}
+
+@keyframes fade-in-arrows {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.arrows-big:hover {
+  transform: scale(1.8);
+  cursor: pointer;
+}
+
+.arrows-big .fas {
+  color: white;
+  transition: color 1s cubic-bezier(0.29, 2.01, 0.5, -0.68);
+}
+
+.arrows-big:hover .fas {
+  color: #fdde8a;
+}
